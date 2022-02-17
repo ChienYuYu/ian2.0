@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+/* ==================================== */
+header{
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 60px;
+    position: relative;
+}
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+.menu a{
+    display: block;
+    text-decoration: none;
+    padding: 15px 20px;
+    color: #111;
+    text-align: center;
+}
+.menu a:hover{
+    background-color: rosybrown;
+    color: #fff;
+}
+.menu .active{
+    background-color: rosybrown;
+    color: #fff;
+}
+.d-menu{
+    display: none;
+    position: absolute;
+    z-index: 999;
+}
+.d-menu a{
+    color: #fff;
+    background-color: rgba(80, 80, 80, 1);
+    text-align: left;
+}
+.d-menu a:hover{
+    background-color: rosybrown;
+    color: #fff;
+}
+.mobile-menu-btn{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    right:10px;
+    /* box-shadow: 0 13px 0 #333, 0 -13px 0 #333; */
+    transform: translateY(-50%);
+    display: none;
+}
+.mobile-menu-btn::after{
+    content:'';
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    box-shadow: 0 13px 0#0fc, 0 -13px 0 #ff0;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+.mobile-menu-btn::before{
+    content:'';
+    width: 40px;
+    height: 4px;
+    background-color: #ff0;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+.openmenu .mobile-menu-btn::after{ /*openmenu動態新增class*/
+    background: #0ef;
+    transform: rotate(45deg);
+    box-shadow:none;
+}
+.openmenu .mobile-menu-btn::before{
+    transform: rotate(135deg);
+}
+.mobile-menu{
+    width: 60%;
+    height: 100vh;
+    background:rgba(188, 143, 143, .97);
+    padding: 1%;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: .5s ease-in;
+}
+.openmenu .mobile-menu{ /*openmenu動態新增class*/
+    transform: translateX(0);
+}
+.mobile-menu a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 7% 0;
+    font-size: 18px;
+    text-align:center;
+    border-bottom: 1.5px dashed #ddd;
+}
+@media (max-width:768px) {
+    header{
+        height: 50px;
+        position: fixed;
+        top: 0;
+        z-index: 5;
+        box-shadow: 0 1px 10px #aaa;
+    }
+    .menu{
+        display: none;
+    }
+    .mobile-menu-btn{
+        display: block;
+    }
+}
+/* ==================================== */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* ==================================== */
+.swiper {
+    /* height: 400px; */
+    margin-bottom: 30px;
+    /* border-radius: 10px; */
+  }
+  .swiper img{
+      width: 100%;
+  }
+.swiper-button-prev, .swiper-button-next{
+      color: rgba(255, 255, 255, .3) !important;
+  }
+  @media (max-width:768px) {
+      .swiper{
+          margin-top: 80px;
+      }
+  }
+  /* =============.product start======================= */
+  .product{
+      /* border: 1px solid #aaa; */
+  }
+  .product h3{
+      text-align: center;
+      font-size: 30px;
+      margin: 10px 0;
+      color: #222;
+  }
+  .product-pic{
+      width: 99%;
+      margin: 0 auto;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      padding: 0.5%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+  }
+  .product-pic li{
+      width: 23%;
+      margin: 1%;
+  }
+
+  .product-pic img{
+      width: 100%;
+      vertical-align: bottom;
+      box-shadow: 0 5px 3px #eee;
+  }
+  @media (max-width:768px) {
+      .product-pic li{
+          width: 46%;
+      }
+  }
+  @media (max-width:576px) {
+    .product-pic{
+        width: 95%;
+    }  
+    .product-pic li{
+          width: 95%;
+      }
+      
+  }
+  /* =============.product end======================= */
+  /* =====.footer start============================== */
+  .footer{
+      width: 100%;
+      background-color: #333;
+      color: #eee;
+      padding: 10px 0;
+      text-align: center;
+      line-height: 1.6;
+      margin-top: 30px;
+  }
+  .footer span{
+    letter-spacing: 8px;
+  }
+/* =====.footer end============================== */
